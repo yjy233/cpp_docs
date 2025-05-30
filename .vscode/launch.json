@@ -2,12 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "name": "(lldb) 启动",
+      "type": "cppdbg",
       "request": "launch",
+      "program": "/Users/yjy/code/cpp_docs/syntax/a.out",
       "args": [],
-      "cwd": "/Users/yjy/code/cpp_docs/template",
-      "program": "/Users/yjy/code/cpp_docs/template/build/Debug/outDebug"
-    }
+      "stopAtEntry": false,
+      "cwd": "/Users/yjy/code/cpp_docs/syntax",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+
+    {
+      "name": "(lldb) 启动2222",
+      "type": "cppdbg",
+      "request": "launch",
+      //"program": "/Users/yjy/code/cpp_docs/syntax/a.out",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      //"cwd": "/Users/yjy/code/cpp_docs/syntax",
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    
   ]
 }

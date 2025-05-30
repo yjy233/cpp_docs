@@ -10,4 +10,3 @@ cd /Library/Developer/CommandLineTools/usr/include
 
 sudo ln -s /opt/homebrew/cellar/faiss/1.11.0/include/faiss ./
 ```
-
