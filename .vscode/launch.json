@@ -5,7 +5,7 @@
       "name": "(lldb) 启动",
       "type": "cppdbg",
       "request": "launch",
-      "program": "/Users/yjy/code/cpp_docs/syntax/a.out",
+      "program": "/Users/yjy/code/cpp_docs/bazel-bin/syntax/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
       "cwd": "/Users/yjy/code/cpp_docs/syntax",
