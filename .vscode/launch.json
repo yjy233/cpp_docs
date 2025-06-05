@@ -5,10 +5,10 @@
       "name": "(lldb) 启动",
       "type": "cppdbg",
       "request": "launch",
-      "program": "/Users/yjy/code/cpp_docs/bazel-bin/syntax/${fileBasenameNoExtension}",
+      "program": "/Users/yjy/code/cpp_docs/bazel-bin/base/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "/Users/yjy/code/cpp_docs/syntax",
+      "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "lldb"

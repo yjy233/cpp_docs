@@ -1,0 +1,30 @@
+WARNING: For repository 'platforms', the root module requires module version platforms@0.0.10, but got platforms@0.0.11 in the resolved dependency graph. Please update the version in your MODULE.bazel or set --check_direct_dependencies=off
+INFO: Analyzed target //base:base (69 packages loaded, 516 targets configured).
+SUBCOMMAND: # //base:base [action 'Compiling base/base.cc', configuration: 7b0e975ed79c3c22e14eee3e18ee34844d2afb00dcb4598fbb83fd49f1c0cf7c, execution platform: @@platforms//host:host, mnemonic: CppCompile]
+(cd /private/var/tmp/_bazel_yjy/c7019bd9893f586f6cf2198c82d8a0e8/execroot/_main && \
+  exec env - \
+    PATH=/Users/yjy/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/yjy/go/bin \
+    PWD=/proc/self/cwd \
+  /usr/bin/g++ -MD -MF bazel-out/darwin_arm64-dbg/bin/base/_objs/base/base.d '-frandom-seed=bazel-out/darwin_arm64-dbg/bin/base/_objs/base/base.o' -iquote . -iquote bazel-out/darwin_arm64-dbg/bin -iquote external/rules_cc+ -iquote bazel-out/darwin_arm64-dbg/bin/external/rules_cc+ -iquote external/bazel_tools -iquote bazel-out/darwin_arm64-dbg/bin/external/bazel_tools -lstdc++ -g -c base/base.cc -o bazel-out/darwin_arm64-dbg/bin/base/_objs/base/base.o)
+# Configuration: 7b0e975ed79c3c22e14eee3e18ee34844d2afb00dcb4598fbb83fd49f1c0cf7c
+# Execution platform: @@platforms//host:host
+# Runner: local
+INFO: From Compiling base/base.cc:
+clang++: warning: -Z-reserved-lib-stdc++: 'linker' input unused [-Wunused-command-line-argument]
+SUBCOMMAND: # //base:base [action 'Linking base/base', configuration: 7b0e975ed79c3c22e14eee3e18ee34844d2afb00dcb4598fbb83fd49f1c0cf7c, execution platform: @@platforms//host:host, mnemonic: CppLink]
+(cd /private/var/tmp/_bazel_yjy/c7019bd9893f586f6cf2198c82d8a0e8/execroot/_main && \
+  exec env - \
+    PATH=/Users/yjy/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/yjy/go/bin \
+    PWD=/proc/self/cwd \
+  /usr/bin/g++ -o bazel-out/darwin_arm64-dbg/bin/base/base bazel-out/darwin_arm64-dbg/bin/base/_objs/base/base.o -lstdc++)
+# Configuration: 7b0e975ed79c3c22e14eee3e18ee34844d2afb00dcb4598fbb83fd49f1c0cf7c
+# Execution platform: @@platforms//host:host
+# Runner: local
+INFO: From Linking base/base:
+ld: warning: ignoring duplicate libraries: '-lc++'
+INFO: Found 1 target...
+Target //base:base up-to-date:
+  bazel-bin/base/base
+INFO: Elapsed time: 0.545s, Critical Path: 0.34s
+INFO: 6 processes: 4 internal, 2 local.
+INFO: Build completed successfully, 6 total actions

@@ -2,6 +2,7 @@ load(":cc_toolchain_config.bzl", "cc_toolchain_config")
 
 filegroup(name = "empty")
 
+
 cc_toolchain_config(
     name = "macos_arm64_toolchain_config",
     archive_flags = [],
@@ -30,11 +31,13 @@ toolchain(
         #"@platforms//cpu:x86_64",
         #"@platforms//os:linux",
         "@platforms//os:macos",
+        "@platforms//cpu:arm64",
     ],
     target_compatible_with = [
         #"@platforms//cpu:x86_64",
         #"@platforms//os:linux",
         "@platforms//os:macos",
+        "@platforms//cpu:arm64",
     ],
 )
 

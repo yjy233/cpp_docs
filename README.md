@@ -55,3 +55,16 @@ dsymutil bazel-bin/syntax/concept -o bazel-bin/syntax/concept.dYSM
 ## B站视频
 https://www.bilibili.com/video/BV1sBAkeZEpm/?spm_id_from=333.337.search-card.all.click&vd_source=b60fc618995711cd1e52528d93673559
 
+
+
+# 失败记录
+尽量不要用自己的toolchain，比如突然编译之后，生成的dsym文件没有debug信息，应该是 toolchain配置没有加-g 
+
+通过 --subcommands 看出所有的具体命令，可以debug出
+
+# tips
+
+
+# buildifier 安装
+可以上github安装二进制文件 https://github.com/bazelbuild/buildtools/releases
+最简单 brew install buildifer

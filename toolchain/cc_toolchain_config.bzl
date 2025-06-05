@@ -3,6 +3,8 @@
 #filegroup(name = "macos_arm64_toolchain_config")
 # cpp action_name 地址  https://github.com/bazelbuild/bazel/blob/master/tools/build_defs/cc/action_names.bzl 
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
+load("@rules_cc//cc/common:cc_common.bzl", "cc_common")
+
 # NEW
 load(
     "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
@@ -110,7 +112,7 @@ def _impl(ctx):
                      flag_groups = ([
                          flag_group(
                              flags = [
-                                "-lstdc++",
+                                "-lc++",
                              ],
                          ),
                      ]),
@@ -122,7 +124,7 @@ def _impl(ctx):
     tool_paths = [ # NEW
         tool_path(
             name = "gcc",  # Compiler is referenced by the name "gcc" for historic reasons.
-            path = "/usr/bin/clang++",
+            path = "/usr/bin/g++",
         ),
         tool_path(
             name = "ld",
@@ -154,6 +156,8 @@ def _impl(ctx):
         ),
     ]
 
+    #https://bazel.build/rules/lib/builtins/ctx.html
+    # CcToolchainConfigInfo cc_common.create_cc_toolchain_config_info(ctx, features=[], action_configs=[], artifact_name_patterns=[], cxx_builtin_include_directories=[], toolchain_identifier, host_system_name=None, target_system_name=None, target_cpu=None, target_libc=None, compiler, abi_version=None, abi_libc_version=None, tool_paths=[], make_variables=[], builtin_sysroot=None)
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
         cxx_builtin_include_directories = [ # NEW
@@ -168,7 +172,7 @@ def _impl(ctx):
         toolchain_identifier = "local",
         host_system_name = "local",
         target_system_name = "local",
-        target_cpu = "k8",
+        target_cpu = "arm64",
         target_libc = "unknown",
         compiler = "gcc",
         abi_version = "unknown",
