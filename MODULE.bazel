@@ -10,7 +10,9 @@ bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "googletest", version = "1.17.0")
 
 # 单元测试别用，会报错 ar rcsD 只能在linux用，在macos只能 rcs 只能 d 
-#register_toolchains(
-#   "//toolchain:cc_toolchain_for_macos_arm64"
+register_toolchains(
+   "//toolchain:cc_toolchain_for_macos_arm64"
    #"//toolchain:cc_toolchain_for_linux_x86_64"
-#)
+)
+
+

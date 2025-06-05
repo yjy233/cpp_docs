@@ -5,5 +5,5 @@ cc_binary(
     name = "hello-world",
     srcs = ["hello-world.cc"],
     includes = ["/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"],
-    copts = ["-lc++"],
+    copts = ["-lstdc++"],
 )

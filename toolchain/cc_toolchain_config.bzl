@@ -1,6 +1,7 @@
 #package(default_visibility = ["//visibility:public"])
 
 #filegroup(name = "macos_arm64_toolchain_config")
+# cpp action_name 地址  https://github.com/bazelbuild/bazel/blob/master/tools/build_defs/cc/action_names.bzl 
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
 # NEW
 load(
@@ -19,7 +20,7 @@ all_link_actions = [ # NEW
     ACTION_NAMES.cpp_link_executable,
     ACTION_NAMES.cpp_link_dynamic_library,
     ACTION_NAMES.cpp_link_nodeps_dynamic_library,
-    ACTION_NAMES.cpp_link_static_library,
+    # ACTION_NAMES.cpp_link_static_library, // 这一行不能加，加了以后 ar 会变成rcsD 在linux才能跑，在macos只能 rcs
 ]
 
 def _impl(ctx):

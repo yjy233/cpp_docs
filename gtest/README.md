@@ -5,6 +5,15 @@
 
 brew install googletest
 
+bazel test --cxxopt=-std=c++17 //gtest:all
+
+sudo ln -s /opt/homebrew/cellar/faiss/1.11.0/include/faiss ./
+sudo ln -s /opt/homebrew/Cellar/googletest/1.17.0/include ./
+
+
+vscode 中添加includepath 
+sudo ln -s /opt/homebrew/Cellar/googletest/1.17.0/include/gtest ./
+
 # 然后以来就用MODULE.bazel
 
 bazel_dep(name = "googletest", version = "1.17.0")就行

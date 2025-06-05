@@ -11,7 +11,8 @@
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "-std=c++23",
-                "-stdlib=libc++"
+                "-stdlib=libc++",
+                "-lgtest"
             ],
             "options": {
                 "cwd": "${fileDirname}"
