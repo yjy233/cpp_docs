@@ -2,7 +2,10 @@ load(":cc_toolchain_config.bzl", "cc_toolchain_config")
 
 filegroup(name = "empty")
 
-cc_toolchain_config(name = "macos_arm64_toolchain_config")
+cc_toolchain_config(
+    name = "macos_arm64_toolchain_config",
+    archive_flags = [],
+)
 
 cc_toolchain(
     name = "macos_arm64_toolchain",
